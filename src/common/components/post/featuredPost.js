@@ -1,32 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Hidden from "@material-ui/core/Hidden";
+import * as moment from "moment/moment.js";
+import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   card: {
-    display: 'flex',
+    display: "flex"
   },
   cardDetails: {
-    flex: 1,
+    flex: 1
   },
   cardMedia: {
-    width: 160,
-  },
+    width: 160
+  }
 });
 
 export default function FeaturedPost(props) {
   const classes = useStyles();
-  const {post}=props
+  const { post } = props;
 
   return (
-    <Grid item xs={12} md={6} style={{padding:1}}>
-      <CardActionArea component="a" href="#">
+    <Grid style={{margin:2}}>
+      <CardActionArea component={Link} to={`post/${post.postId}`}>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
             <CardContent>
@@ -34,18 +36,23 @@ export default function FeaturedPost(props) {
                 {post.title}
               </Typography>
               <Typography variant="subtitle1" color="textSecondary">
-                {post.date}
+                {/* {post.date} */}
+                {moment(post.date, "MMM dd,yyyy").fromNow()}
               </Typography>
               <Typography variant="subtitle1" paragraph>
                 {post.description}
               </Typography>
-              <Typography variant="subtitle1" color="primary">
+              {/* <Typography variant="subtitle1" color="primary">
                 Continue reading...
-              </Typography>
+              </Typography> */}
             </CardContent>
           </div>
           <Hidden xsDown>
-            <CardMedia className={classes.cardMedia} image={post.image} title={post.imageTitle} />
+            <CardMedia
+              className={classes.cardMedia}
+              image={post.image}
+              title={post.imageTitle}
+            />
           </Hidden>
         </Card>
       </CardActionArea>
@@ -54,5 +61,5 @@ export default function FeaturedPost(props) {
 }
 
 FeaturedPost.propTypes = {
-  post: PropTypes.object,
+  post: PropTypes.object
 };
