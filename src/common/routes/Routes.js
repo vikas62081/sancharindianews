@@ -1,6 +1,7 @@
 
 import PostContainer from "../container/postContainer";
 import { Main } from "../container/main";
+import Login from "../components/login/login";
 export const routes = [
   {
     path: "/",
@@ -12,11 +13,11 @@ export const routes = [
     exact: true,
     component: PostContainer
   },
-  // {
-  //   path: "/map",
-  //   exact: true,
-  //   component: WorldMap
-  // },
+  {
+    path: "/login",
+    exact: true,
+    component: Login
+  },
   // {
   //   path: `/district/:state`,
   //   exact: true,

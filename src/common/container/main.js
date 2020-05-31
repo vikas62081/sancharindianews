@@ -5,7 +5,6 @@ import MainFeaturedPost from "../components/post/mainFeaturedPost";
 import FeaturedPost from "../components/post/featuredPost";
 // import Main from "./Main";
 // import Sidebar from "./Sidebar";
-import {Footer} from "../components/layout/footer";
 import {posts,mainFeaturedPost} from '../constant/application'
 const useStyles = makeStyles(theme => ({
   mainGrid: {
@@ -20,7 +19,7 @@ export const Main = () => {
   return (
     <React.Fragment>
         {/* <Header title="Blog" sections={sections} /> */}
-        <main>
+       
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={2}>
             {posts.map(post => (
@@ -37,8 +36,7 @@ export const Main = () => {
               social={sidebar.social}
             />
           </Grid> */}
-        </main>
-      <Footer title="Footer" description="Something here to give the footer a purpose!" />
+      
     </React.Fragment>
   );
 };

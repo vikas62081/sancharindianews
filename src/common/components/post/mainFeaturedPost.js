@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -53,9 +53,9 @@ export default function MainFeaturedPost(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" href="#">
-              {post.linkText}
-            </Link>
+            <Typography variant="subtitle1" component={Link} to={`post/${post.postId}`} >
+               {post.linkText}
+            </Typography>
           </div>
         </Grid>
       </Grid>

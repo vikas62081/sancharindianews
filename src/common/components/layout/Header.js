@@ -17,6 +17,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InfoIcon from '@material-ui/icons/Info';
 import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button'
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -83,7 +84,7 @@ export default function Header() {
                     <Typography variant="h6" className={classes.title}>
                        News
                     </Typography>
-                    {/* <Button color="inherit">Login</Button> */}
+                    <Button color="inherit" component={Link} to="/login">Login</Button>
 
                    
                         <IconButton edge="end"

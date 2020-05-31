@@ -9,7 +9,7 @@ export const posts = [
         description:
           "This is a wider card with supporting text below as a natural lead-in to additional content.",
         image: "https://source.unsplash.com/random",
-        imageText: "Image Text",
+        imageTitle: "Image Text",
         location:"Bihar",
         date: "March 14, 2020",
         by: "Tom",
@@ -34,7 +34,7 @@ export const posts = [
         description:
           "This is a wider card with supporting text below as a natural lead-in to additional content.",
         image: "https://source.unsplash.com/random",
-        imageText: "Image Text",
+        imageTitle: "Image Text",
         date: "March 14, 2020",
         by: "Tom",
         content: `
@@ -58,7 +58,7 @@ export const posts = [
         description:
           "This is a wider card with supporting text below as a natural lead-in to additional content.",
         image: "https://source.unsplash.com/random",
-        imageText: "Image Text",
+        imageTitle: "Image Text",
         date: "March 14, 2020",
         by: "Tom",
         content: `
@@ -82,7 +82,7 @@ export const posts = [
         description:
           "This is a wider card with supporting text below as a natural lead-in to additional content.",
         image: "https://source.unsplash.com/random",
-        imageText: "Image Text",
+        imageTitle: "Image Text",
         date: "March 14, 2020",
         by: "Tom",
         content: `
@@ -106,7 +106,7 @@ export const posts = [
         description:
           "This is a wider card with supporting text below as a natural lead-in to additional content.",
         image: "https://source.unsplash.com/random",
-        imageText: "Image Text",
+        imageTitle: "Image Text",
         date: "March 14, 2020",
         by: "Tom",
         content: `
@@ -130,7 +130,7 @@ export const posts = [
         description:
           "This is a wider card with supporting text below as a natural lead-in to additional content.",
         image: "https://source.unsplash.com/random",
-        imageText: "Image Text",
+        imageTitle: "Image Text",
         date: "March 14, 2020",
         by: "Tom",
         content: `
@@ -164,6 +164,7 @@ export const sections = [
 ];
 
 export const mainFeaturedPost = {
+  postId: "1234",
   title: "Title of a longer featured blog post",
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",

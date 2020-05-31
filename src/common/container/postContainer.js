@@ -15,9 +15,9 @@ export const PostContainer = props => {
   const post = posts.find(post => post.postId === postId);
   console.log(post);
   return (
-    <Grid container>
+    <Grid container spacing={1}>
       <Grid item xs={12} md={8}>
-        <Grid container spacing={5} className={classes.mainGrid}>
+        <Grid className={classes.mainGrid}>
           {post && <PostDetails post={post} />}
         </Grid>
       </Grid>

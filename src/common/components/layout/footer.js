@@ -5,12 +5,13 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://www.sancharindianews.in/">
+      https://www.sancharindianews.in
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -40,6 +41,7 @@ export const Footer=(props)=> {
           {description}
         </Typography>
         <Copyright />
+        <gg/>
       </Container>
     </footer>
   );
